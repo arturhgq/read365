@@ -1,0 +1,26 @@
+Package: read365
+Title: Read OneDrive and SharePoint files
+Version: 0.0.1
+Authors@R: 
+    person("Artur", "Quirino", , "contact@arturhgq.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This package provides tools to read OneDrive and SharePoint files.
+License: MIT + file LICENSE
+Suggests: 
+    covr,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+URL: https://github.com/arturhgq/read365,
+    https://arturhgq.github.io/read365/
+BugReports: https://github.com/arturhgq/read365/issues
+Imports: 
+    cli,
+    dplyr,
+    lifecycle,
+    Microsoft365R,
+    purrr,
+    readxl,
+    tibble
