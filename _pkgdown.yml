@@ -1,37 +1,33 @@
-url: http://read365.arturhgq.com
-
+url: https://read365.arturhgq.com
 authors:
   Artur Quirino:
     href: https://arturhgq.com
-
 template:
   bootstrap: 5
   bslib:
-    primary: "#0067b8"
-    bg: "#f8f9f9"
-    fg: "#283747"
-    code-bg: "#d6dcdc"
+    primary: '#0067b8'
+    bg: '#f8f9f9'
+    fg: '#283747'
+    code-bg: '#d6dcdc'
     border-radius: 0.5rem
     btn-border-radius: 0.25rem
-    code_font: {google: "Fira Code"}
-
+    code_font:
+      google: Fira Code
 reference:
 - title: SharePoint
-  desc:
+  desc: ~
   contents:
   - get_index
   - SharePoint_xlsx
   - SharePoint_csv
   - SharePoint_file
-
 - title: OneDrive
-  desc:
+  desc: ~
   contents:
   - OneDrive_xlsx
   - OneDrive_csv
   - OneDrive_file
-
 - title: Download
-  desc:
-  contents:
-  - download365_file
+  desc: ~
+  contents: download365_file
+
