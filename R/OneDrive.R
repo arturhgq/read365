@@ -73,7 +73,7 @@ OneDrive_csv <- function(file, ...) {
 #' @param .function Function that will be used to reading the file
 #' @param ... \code{.function} args.
 #' @examples
-#'  \dontrun{OneDrive_file("path/file.csv", read.csv)}
+#'  \dontrun{OneDrive_file("path/file.csv", read.delim), sep = ","}
 #' @export
 OneDrive_file <- function(file, .function, ...) {
   dots_args = list(...)
