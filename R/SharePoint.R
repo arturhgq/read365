@@ -1,25 +1,16 @@
-#' @title Get the index of a Sharepoint page drive
+#' @title Get the drive names of a Sharepoint page
 #' @description `r lifecycle::badge("experimental")`
 #'
-#' This function gets the index of a Sharepoint page drive
+#' This function gets the drive names of a Sharepoint page
 #' @param SharePoint [Microsoft365R::get_sharepoint_site()]
-#' @param drive SharePoint drive
 #' @export
-get_index <- \(SharePoint, drive) {
-  SharePoint$list_drives() -> drives
-  1:length(drives) |>
-    purrr::map_dfr(
-      ~ {
-        drives[[.x]][["properties"]][["name"]] -> drive
-        tibble::tibble(
-          index = .x,
-          drive = drive
-        )
-      }) |>
-    dplyr::filter(drive %in% drive) |>
-    dplyr::pull(index)
+get_drives <- function(SharePoint) {
+  drives = SharePoint$list_drives()
+  sapply(
+    seq_along(drives),
+    function(x) drives[[x]][["properties"]][["name"]]
+  )
 }
-
 
 #' @title Read '.xlsx' files stored in a SharePoint
 #' @description `r lifecycle::badge("experimental")`

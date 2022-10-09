@@ -6,13 +6,24 @@
 #' @param where "OneDrive" or "SharePoint"
 #' @export
 download365_file <- function(where, SharePoint, drive, file) {
-  ext = gsub(".*\\.", "", file)
+  ext = gsub(".*\\.", ".", file)
   tempFile = tempfile(fileext = ext)
   if (where == "SharePoint") {
     site = Microsoft365R::get_sharepoint_site(site_url = SharePoint)
-    drives = site$list_drives()
-    drive_index = get_index(site, drive)
-    drive = drives[[drive_index]]
+
+    drives_list = site$list_drives()
+    drives_name = get_drives(site)
+    drive_index = which(drives_name == drive)
+
+    if (length(drive_index) == 0) {
+      cli::cli_abort(
+        "The drive '{drive}' was not found.
+        Use `get_drives()` how get a list of available drives."
+      )
+    }
+
+    drive = drives_list[[drive_index]]
+
   } else if (where == "OneDrive"){
     drive = Microsoft365R::get_business_onedrive()
   } else{

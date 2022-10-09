@@ -17,7 +17,7 @@ reference:
 - title: SharePoint
   desc: ~
   contents:
-  - get_index
+  - get_drives
   - SharePoint_xlsx
   - SharePoint_csv
   - SharePoint_file
