@@ -31,7 +31,7 @@ get_drives <- function(SharePoint) {
 #'   )
 #' }
 #' @export
-SharePoint_xlsx <- function(SharePoint, drive, file,...) {
+SharePoint_xlsx <- function(SharePoint, drive, file, ...) {
   dots_args = list(...)
   fun_args = as.list(match.call())
   formal_args = formalArgs(download365_file)
@@ -106,9 +106,9 @@ SharePoint_csv <- function(SharePoint, drive, file, ...) {
 #' SharePoint_file(
 #'   SharePoint = "https://page.sharepoint.com",
 #'   drive = "Documents",
-#'   file = "Book.xlsx",
-#'   .function = readxl::read_xlsx,
-#'   sheet = c("Sheet1", "Sheet2")
+#'   file = "Book.txt",
+#'   read.delim,
+#'   sep = ""
 #'   )
 #' }
 #' @export
