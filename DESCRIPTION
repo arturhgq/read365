@@ -3,7 +3,7 @@ Title: Read OneDrive and SharePoint files
 Version: 0.0.1
 Authors@R: 
     person("Artur", "Quirino", , "contact@arturhgq.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           comment = c(ORCID = "0000-0001-8071-6348"))
 Description: This package provides tools to read OneDrive and SharePoint files.
 License: MIT + file LICENSE
 Suggests: 
