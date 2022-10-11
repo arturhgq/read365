@@ -18,7 +18,7 @@ download365_file <- function(where, SharePoint, drive, file) {
     if (length(drive_index) == 0) {
       cli::cli_abort(
         "The drive '{drive}' was not found.
-        Use `get_drives()` how get a list of available drives."
+        Use `get_drives()` to get a list of available drives."
       )
     }
 

@@ -19,5 +19,5 @@ OneDrive_file(file, .function, ...)
 This function reads files stored in an OneDrive
 }
 \examples{
- \dontrun{OneDrive_file("path/file.csv", read.delim, sep = ",")}
+ \dontrun{OneDrive_file("path/file.txt", read.delim, sep = "")}
 }

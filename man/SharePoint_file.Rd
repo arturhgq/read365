@@ -27,9 +27,9 @@ This function reads files stored in a SharePoint
 SharePoint_file(
   SharePoint = "https://page.sharepoint.com",
   drive = "Documents",
-  file = "Book.xlsx",
-  .function = readxl::read_xlsx,
-  sheet = c("Sheet1", "Sheet2")
+  file = "Book.txt",
+  read.delim,
+  sep = ""
   )
 }
 }
