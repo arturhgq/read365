@@ -11,8 +11,7 @@ This package provides tools to read OneDrive and SharePoint files.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/arturhgq/read365}
-  \item \url{https://arturhgq.github.io/read365/}
+  \item \url{https://github.com/arturhgq/read365,}
   \item Report bugs at \url{https://github.com/arturhgq/read365/issues}
 }
 

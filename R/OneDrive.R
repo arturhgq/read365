@@ -91,3 +91,34 @@ OneDrive_file <- function(file, .function, ...) {
   dots_args <- c(tempFile, list(...))
   do.call(.function, dots_args)
 }
+
+#' @title Download and read an OneDrive file from a shared url
+#' @description
+#' This function downloads and reads an OneDrive file from a shared url.
+#' @param url A shared url from OneDrive.
+#' @param .function Function that will be used to reading the file.
+#' @param ... .function args.
+#' @examples
+#'  url = 'https://arturhgq-my.sharepoint.com/:x:/p/contact/EZ_KJ3cqtIVEh4PdXhTGy7IBpWT5_Zlp2VjYwlgVCPK4oQ?e=UZGQZt'
+#'
+#'  OneDrive_shared_file(
+#'     url,
+#'     .function = readxl::read_excel
+#'   )
+#' @references Based on https://github.com/PaulMelloy/Download_from_OneDrive
+#' @export
+
+OneDrive_shared_file <- function(url, .function, ...){
+  if (length(url) > 1) {
+    cli::cli_abort(
+      "Use `lapply(urls, function(x) Read_shared_file(...))` to read more than one file at once"
+    )
+  }
+  url_split = unlist(strsplit(url,"[?]"))[1]
+  url = paste0(url_split,"?download=1")
+  file = dtools::download.files(url)
+
+  dots_args = c(as.character(file), list(...))
+  do.call(.function, dots_args)
+}
+

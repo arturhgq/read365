@@ -2,6 +2,7 @@
 
 export(OneDrive_csv)
 export(OneDrive_file)
+export(OneDrive_shared_file)
 export(OneDrive_xlsx)
 export(SharePoint_csv)
 export(SharePoint_file)
