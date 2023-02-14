@@ -27,6 +27,7 @@ reference:
   - OneDrive_xlsx
   - OneDrive_csv
   - OneDrive_file
+  - OneDrive_shared_file
 - title: Download
   desc: ~
   contents: download365_file
