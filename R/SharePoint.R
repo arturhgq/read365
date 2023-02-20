@@ -126,3 +126,7 @@ SharePoint_file <- \(SharePoint, drive, file, .function, ...) {
   dots_args <- c(tempFile, list(...))
 do.call(.function, dots_args)
 }
+
+#' @rdname OneDrive_shared_file
+#' @export
+SharePoint_shared_file = OneDrive_shared_file

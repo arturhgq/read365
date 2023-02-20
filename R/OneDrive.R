@@ -92,11 +92,11 @@ OneDrive_file <- function(file, .function, ...) {
   do.call(.function, dots_args)
 }
 
-#' @title Download and read an OneDrive file from a shared url
+#' @title Download and read a file from a shared url
 #' @description
-#' This function downloads and reads an OneDrive file from a shared url.
-#' @param url A shared url from OneDrive.
-#' @param .function Function that will be used to reading the file.
+#' This function downloads and reads a file from a shared url.
+#' @param url A shared url from OneDrive or SharePoint.
+#' @param .function The function will read the file.
 #' @param ... .function args.
 #' @examples
 #'  url = 'https://arturhgq-my.sharepoint.com/:x:/p/contact/EZ_KJ3cqtIVEh4PdXhTGy7IBpWT5_Zlp2VjYwlgVCPK4oQ?e=UZGQZt'
