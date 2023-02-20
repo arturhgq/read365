@@ -116,9 +116,11 @@ OneDrive_shared_file <- function(url, .function, ...){
   }
   url_split = unlist(strsplit(url,"[?]"))[1]
   url = paste0(url_split,"?download=1")
-  file = dtools::download.files(url)
 
-  dots_args = c(as.character(file), list(...))
+  tempfile = tempfile()
+  httr::GET(url, httr::write_disk(path = tempfile, overwrite = TRUE))
+
+  dots_args = c(tempfile, list(...))
   do.call(.function, dots_args)
 }
 
